@@ -11,7 +11,7 @@ A C language-based MCQ Quiz System built in multiple versions – starting from 
   - Hardcoded questions in C file
   - Score calculation
   - Supports uppercase/lowercase input
-- 📂 [Go to Version 1](https://github.com/Omi-code404/C-Quiz-System/tree/main/version01)
+- 📂 [Go to Version 1](https://github.com/Omi-code404/C-Quiz-System/tree/main/Version01)
 
 ### *Future Versions*
 - *Version 2:* Load questions from file
