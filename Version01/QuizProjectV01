@@ -29,6 +29,9 @@ A simple MCQ Quiz Game written in *C language*, designed for beginners to showca
 4. Answer the questions by typing the option letter (A/B/C/D).
 
 ---
+## Screenshots
+![Quiz Screenshot 1](QuizProjectV01/pro1.png)
+![Quiz Screenshot 2](QuizProjectV01/pro2.png)
 
 ## 📌 Future Improvements
 - Load questions from an external file (Version 2)
