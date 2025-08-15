@@ -1,0 +1,39 @@
+# QuizProjectV1 🎯
+A simple MCQ Quiz Game written in *C language*, designed for beginners to showcase core programming concepts like loops, conditions, arrays, functions, and file handling (basic version without file input).
+---
+## 📌 Features
+- Multiple-choice quiz system (MCQ)
+- Predefined set of questions inside the C code
+- Score calculation at the end of the quiz
+- Accepts both uppercase and lowercase answers
+- Beginner-friendly structure
+
+---
+
+## 🛠 Technologies Used
+- *C Language*
+- Loops (for, while)
+- Conditional statements (if, else)
+- Arrays
+- Functions
+- Standard I/O (printf, scanf)
+
+---
+
+## 📂 Project Structure
+
+## 🚀 How to Run
+1. Clone the repository or download the project files.
+2. Open the project in *Code::Blocks* or any C compiler.
+3. Compile and run quiz_v1.c.
+4. Answer the questions by typing the option letter (A/B/C/D).
+
+---
+
+## 📌 Future Improvements
+- Load questions from an external file (Version 2)
+- Randomize question order
+- Add timer for each question
+- Support for more than one correct answer
+ 
+📅 *Version:* 1.0
