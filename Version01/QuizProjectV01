@@ -30,8 +30,8 @@ A simple MCQ Quiz Game written in *C language*, designed for beginners to showca
 
 ---
 ## Screenshots
-![Quiz Screenshot 1](QuizProjectV01/pro1.png)
-![Quiz Screenshot 2](QuizProjectV01/pro2.png)
+![Quiz Screenshot 1](Screenshots/pro1.png)
+![Quiz Screenshot 2](Screenshots/pro2.png)
 
 ## 📌 Future Improvements
 - Load questions from an external file (Version 2)
