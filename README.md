@@ -25,14 +25,6 @@ A C language-based MCQ Quiz System built in multiple versions – starting from 
 - Conditional statements (if, else)
 - Arrays
 - Functions
-- File Handling (from Version 2 onward)
-
----
-
-## 🚀 How to Run Any Version
-1. Navigate to the version folder (e.g., Version1, Version2)
-2. Open the .c file in *Code::Blocks* or any C compiler
-3. Compile & run the program
 
 ---
 
@@ -45,6 +37,38 @@ A C language-based MCQ Quiz System built in multiple versions – starting from 
 
 [Image2](https://github.com/Omi-code404/C-Quiz-System/blob/main/Version01/pro2.png)
 
+---
+### *Version 2 – QuizProjectV2*
+
+*Type:* Intermediate
+-*Features:*
+-Questions loaded from external file (questions.txt)
+-Paginated display (10 questions per page)
+-Tracks student performance and saves to history.txt
+-Option to view previous quiz results
+
+📂[Go to Version 2]()
+
+### *Future Versions*
+
+Version 3: Random question order
+Version 4: Timer for each question
+
+### *🛠 Technologies Used*
+
+-*C Language*
+-Loops (for, while)
+-Conditional statements (if, else)
+-Arrays
+-Functions
+-File Handling (fopen, fscanf, fprintf)
+-Character handling (toupper)
+
+
+## 🚀 How to Run Any Version
+1. Navigate to the version folder (e.g., Version1, Version2)
+2. Open the .c file in *Code::Blocks* or any C compiler
+3. Compile & run the program
 
 ---
 
@@ -52,6 +76,7 @@ A C language-based MCQ Quiz System built in multiple versions – starting from 
 This project is licensed under the *MIT License* – see the [LICENSE](LICENSE) file for details.
 
 ---
-
+### 
 ✍ *Author:* Omi Das  
 📅 *Started:* 2025-08-15
+📅 *Updated:* 2025-08-21
