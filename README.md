@@ -56,13 +56,24 @@ A C language-based MCQ Quiz System built in multiple versions – starting from 
 
 ### *🛠 Technologies Used*
 
--*C Language*
+ -*C Language*
  - Loops (for, while)
  - Conditional statements (if, else)
  - Arrays
  - Functions
  - File Handling (fopen, fscanf, fprintf)
  - Character handling (toupper)
+
+## 📷 Screenshots
+(You can add screenshots from each version here)
+
+**version02**
+
+[Image1](https://github.com/Omi-code404/C-Quiz-System/blob/main/Version%202/QuizproV2-1.png)
+
+[Image2](https://github.com/Omi-code404/C-Quiz-System/blob/main/Version%202/QuizproV2-2.png)
+[Image3](https://github.com/Omi-code404/C-Quiz-System/blob/main/Version%202/QuizproV2-3.png)
+[Image4](https://github.com/Omi-code404/C-Quiz-System/blob/main/Version%202/QuizproV2-4.png)
 
 
 ## 🚀 How to Run Any Version
