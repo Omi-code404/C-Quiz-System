@@ -40,29 +40,29 @@ A C language-based MCQ Quiz System built in multiple versions – starting from 
 ---
 ### *Version 2 – QuizProjectV2*
 
-*Type:* Intermediate
--*Features:*
--Questions loaded from external file (questions.txt)
--Paginated display (10 questions per page)
--Tracks student performance and saves to history.txt
--Option to view previous quiz results
+- *Type:* Intermediate
+- *Features:*
+  - Questions loaded from external file (questions.txt)
+  - Paginated display (10 questions per page)
+  - Tracks student performance and saves to history.txt
+  - Option to view previous quiz results
 
-📂[Go to Version 2]()
+📂[Go to Version 2](https://github.com/Omi-code404/C-Quiz-System/tree/main/Version%202)
 
 ### *Future Versions*
 
-Version 3: Random question order
-Version 4: Timer for each question
+-*Version 3:* Random question order
+-*Version 4:* Timer for each question
 
 ### *🛠 Technologies Used*
 
 -*C Language*
--Loops (for, while)
--Conditional statements (if, else)
--Arrays
--Functions
--File Handling (fopen, fscanf, fprintf)
--Character handling (toupper)
+ - Loops (for, while)
+ - Conditional statements (if, else)
+ - Arrays
+ - Functions
+ - File Handling (fopen, fscanf, fprintf)
+ - Character handling (toupper)
 
 
 ## 🚀 How to Run Any Version
