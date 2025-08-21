@@ -51,8 +51,8 @@ A C language-based MCQ Quiz System built in multiple versions – starting from 
 
 ### *Future Versions*
 
--*Version 3:* Random question order
--*Version 4:* Timer for each question
+- *Version 3:* Random question order
+- *Version 4:* Timer for each question
 
 ### *🛠 Technologies Used*
 
