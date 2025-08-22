@@ -120,7 +120,7 @@ int main() {
                 if (answer == 'A' || answer == 'B' || answer == 'C' || answer == 'D') {
                     validInput = 1;
                 } else {
-                    printf("⚠️ Invalid input! Please enter A, B, C, or D.\n");
+                    printf("Invalid input! Please enter A, B, C, or D.\n");
                 }
             } while (!validInput);
 
@@ -153,3 +153,4 @@ int main() {
 printf("\nTotal Questions Available: %d\n", totalQuestions);
     return 0;
 }
+
