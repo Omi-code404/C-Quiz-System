@@ -146,9 +146,6 @@ I built this as an improvement over previous versions - here's what's new:
 - **Works everywhere** - tested on Windows, Linux, and macOS
 
 ## Ideas for Future Improvements
-
-- ✅ **Random questions** - already working!
-- ✅ **Difficulty levels** - implemented!
 - ⏱️ **Add timers** for each question
 - 📊 **More detailed stats** - percentages, trends
 - 👥 **Multiple user support** - different profiles
