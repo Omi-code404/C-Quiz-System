@@ -1,57 +1,288 @@
-# MCQ Quiz Game -Version 3
-
-A C-based Quiz Application that presents 10 randomized multiple-choice questions with difficulty levels, tracks performance history, and provides immediate feedback with score comparison.
----
-## ✨ Features
-
-- **Take quizzes with multiple-choice questions** from 3 difficulty levels (Easy/Medium/Hard)
-- **Randomized question selection** - No two quiz sessions are the same
-- **Immediate feedback on answers** (✅ Correct / ❌ Wrong with correct answer shown)
-- **Difficulty level selection** - Choose Easy, Medium, or Hard questions
-- **Saves best score in history.txt** with performance tracking
-- **View past performance history** anytime with comparison feedback
-- **10 questions per quiz session** - Perfect bite-sized learning
-- **Case-insensitive input** - Accepts both A/a, B/b, C/c, D/d
-- **Motivational feedback** - Encouraging messages based on improvement
----
-## 🛠 Technologies Used
-
-- **C Language** (Standard C – ANSI/ISO C)
-- **File Handling** (easy.txt, medium.txt, hard.txt & history.txt)
-- **Standard Libraries**: `<stdio.h>`, `<stdlib.h>`, `<string.h>`, `<time.h>`
-- **Algorithms**: Fisher-Yates shuffle for randomization
-- **Data Structures**: Structures, arrays, and string manipulation
-
-## 📁 File Structure
-
-```
-mcq-quiz-game/
-├── quiz.c              # Main program file
-├── easy.txt            # Easy level questions
-├── medium.txt          # Medium level questions  
-├── hard.txt            # Hard level questions
-├── history.txt         # Auto-generated score history
-└── README.md           # This file
-```
-
-## ▶️ How to Run
-
-**Compile the code:**
-```bash
-gcc -o quiz quiz.c
-```
-
-**Run the program:**
-```bash
-./quiz        # Linux/macOS
-quiz.exe      # Windows
-```
-
-## 📝 Question File Format
-
-Create your question files (`easy.txt`, `medium.txt`, `hard.txt`) with this format:
-
-```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Quiz Game - Version 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(90deg, #4b6cb7, #182848);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .tagline {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+        
+        section {
+            padding: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+            display: inline-block;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .feature-card {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .badge {
+            background: #3498db;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .file-structure {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+        }
+        
+        .code-block {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .comparison-table th {
+            background: #3498db;
+            color: white;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        
+        .improvement-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .improvement-item {
+            background: #e8f4fc;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .improvement-item::before {
+            content: "✅";
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .sample-output {
+            background: #2c3e50;
+            color: #7fdbff;
+            padding: 20px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            white-space: pre-line;
+            margin: 20px 0;
+            line-height: 1.5;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #2c3e50;
+            color: white;
+            font-size: 1.1rem;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MCQ Quiz Game - Version 3</h1>
+            <p class="tagline">A C-based Quiz Application with Randomized Questions & Performance Tracking</p>
+        </header>
+        
+        <section>
+            <h2>✨ Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Multiple Difficulty Levels</h3>
+                    <p>Take quizzes with questions from 3 difficulty levels: Easy, Medium, and Hard</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Randomized Question Selection</h3>
+                    <p>No two quiz sessions are the same with our intelligent randomization</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Immediate Feedback</h3>
+                    <p>Get instant feedback on answers with correct solutions shown</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Performance Tracking</h3>
+                    <p>Your best scores are saved and compared for motivational progress tracking</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Case-Insensitive Input</h3>
+                    <p>Accepts both uppercase and lowercase answers (A/a, B/b, etc.)</p>
+                </div>
+                <div class="feature-card">
+                    <h3>10 Questions Per Session</h3>
+                    <p>Perfect bite-sized learning experience with 10 questions per quiz</p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>🛠 Technologies Used</h2>
+            <p><strong>C Language</strong> (Standard C – ANSI/ISO C)</p>
+            <p><strong>File Handling</strong> (easy.txt, medium.txt, hard.txt & history.txt)</p>
+            
+            <h3>Standard Libraries</h3>
+            <div class="tech-badges">
+                <span class="badge">stdio.h</span>
+                <span class="badge">stdlib.h</span>
+                <span class="badge">string.h</span>
+                <span class="badge">time.h</span>
+            </div>
+            
+            <h3>Algorithms & Data Structures</h3>
+            <div class="tech-badges">
+                <span class="badge">Fisher-Yates Shuffle</span>
+                <span class="badge">Structures</span>
+                <span class="badge">Arrays</span>
+                <span class="badge">String Manipulation</span>
+            </div>
+        </section>
+        
+        <section>
+            <h2>📁 File Structure</h2>
+            <div class="file-structure">
+                mcq-quiz-game/<br>
+                ├── quiz.c              # Main program file<br>
+                ├── easy.txt            # Easy level questions<br>
+                ├── medium.txt          # Medium level questions<br>
+                ├── hard.txt            # Hard level questions<br>
+                ├── history.txt         # Auto-generated score history<br>
+                └── README.md           # Documentation file
+            </div>
+        </section>
+        
+        <section>
+            <h2>▶️ How to Run</h2>
+            <p><strong>Compile the code:</strong></p>
+            <div class="code-block">gcc -o quiz quiz.c</div>
+            
+            <p><strong>Run the program:</strong></p>
+            <div class="code-block">./quiz        # Linux/macOS<br>quiz.exe      # Windows</div>
+        </section>
+        
+        <section>
+            <h2>📝 Question File Format</h2>
+            <p>Create your question files (<span class="highlight">easy.txt</span>, <span class="highlight">medium.txt</span>, <span class="highlight">hard.txt</span>) with this format:</p>
+            
+            <div class="code-block">
 What is the capital of France?
 A) London
 B) Berlin
@@ -65,27 +296,32 @@ B) Java
 C) C
 D) JavaScript
 C
-
-```
-
-**Format Rules:**
-- Question text on first line
-- Four options starting with A), B), C), D)
-- Correct answer as single letter (A, B, C, or D)
-- Empty line between questions
-
-## 🎮 How It Works
-
-1. **Select Difficulty**: Choose Easy (1), Medium (2), or Hard (3)
-2. **Random Selection**: Program shuffles and picks 10 questions from chosen level
-3. **Interactive Quiz**: Answer each question with A, B, C, or D
-4. **Instant Feedback**: See if you're correct immediately
-5. **Score Tracking**: Your best score is saved and compared
-6. **Performance Review**: View improvement over time
-
-## 📊 Sample Output
-
-```
+            </div>
+            
+            <p><strong>Format Rules:</strong></p>
+            <ul>
+                <li>Question text on first line</li>
+                <li>Four options starting with A), B), C), D)</li>
+                <li>Correct answer as single letter (A, B, C, or D)</li>
+                <li>Empty line between questions</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>🎮 How It Works</h2>
+            <ol>
+                <li><strong>Select Difficulty:</strong> Choose Easy (1), Medium (2), or Hard (3)</li>
+                <li><strong>Random Selection:</strong> Program shuffles and picks 10 questions from chosen level</li>
+                <li><strong>Interactive Quiz:</strong> Answer each question with A, B, C, or D</li>
+                <li><strong>Instant Feedback:</strong> See if you're correct immediately</li>
+                <li><strong>Score Tracking:</strong> Your best score is saved and compared</li>
+                <li><strong>Performance Review:</strong> View improvement over time</li>
+            </ol>
+        </section>
+        
+        <section>
+            <h2>📊 Sample Output</h2>
+            <div class="sample-output">
 === MCQ Quiz Game (Version 3: Random Questions) ===
 Choose difficulty level:
 1. Easy
@@ -110,60 +346,127 @@ Exam Level: Medium
 
 Do you want to see your last best score? (Y/N): y
 📜 Your last best score was: 6/10
-```
-
-## 🔮 Future Improvements
-
-- ✅ **Randomized question order** (Already implemented!)
-- ✅ **Difficulty levels (Easy/Medium/Hard)** (Already implemented!)
-- ⏱️ **Timer for each question**
-- 📊 **Detailed score statistics** (percentages, accuracy trends)
-- 👥 **Multiple user profiles** with separate histories
-- 🏆 **Achievement system** and badges
-- 📱 **Cross-platform GUI interface**
-
-## 🚀 Why This Version is Better Than Previous Versions
-
-### **Version 1 vs Version 3**
-| Feature | Version 1 | Version 3 |
-|---------|-----------|-----------|
-| Question Storage | ❌ Hardcoded | ✅ External files |
-| Question Order | ❌ Always same | ✅ Random selection |
-| Difficulty Levels | ❌ None | ✅ Easy/Medium/Hard |
-| Score History | ❌ No tracking | ✅ Best score saved |
-| User Experience | ❌ Basic | ✅ Interactive feedback |
-
-### **Version 2 vs Version 3**
-| Feature | Version 2 | Version 3 |
-|---------|-----------|-----------|
-| Question Order | ❌ Sequential | ✅ Randomized |
-| Difficulty Options | ❌ Single level | ✅ 3 difficulty levels |
-| Score Tracking | ❌ Session only | ✅ Persistent history |
-| Replayability | ❌ Predictable | ✅ Different every time |
-| User Choice | ❌ No options | ✅ Difficulty selection |
-
-### **Key Improvements in Version 3:**
-- 🎲 **Randomization Engine**: No memorizing question sequences
-- 🎯 **Difficulty Scaling**: Choose your challenge level
-- 💾 **Smart Persistence**: Remembers your best performance
-- 🏆 **Progress Tracking**: Motivational feedback system
-- 🔄 **Infinite Replayability**: Random selection keeps it fresh
-- ⚡ **Enhanced UX**: Better prompts and visual feedback
-
-## 🎓 Perfect for
-
-- **Students**: Self-assessment and exam preparation
-- **Teachers**: Quick classroom quizzes
-- **Developers**: C programming portfolio project
-- **Learning**: Understanding file I/O, algorithms, and data structures
----
-## 👨‍💻 Technical Highlights
-
-- **Memory Efficient**: Static allocation with bounds checking
-- **Error Handling**: Graceful file and input validation
-- **Algorithm Implementation**: Fisher-Yates shuffle algorithm
-- **Modular Design**: Clean function separation
-- **Cross-Platform**: Works on Windows, Linux, macOS
-
----
-
+            </div>
+        </section>
+        
+        <section>
+            <h2>🚀 Version Comparison</h2>
+            
+            <h3>Version 1 vs Version 3</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Feature</th>
+                    <th>Version 1</th>
+                    <th>Version 3</th>
+                </tr>
+                <tr>
+                    <td>Question Storage</td>
+                    <td>❌ Hardcoded</td>
+                    <td>✅ External files</td>
+                </tr>
+                <tr>
+                    <td>Question Order</td>
+                    <td>❌ Always same</td>
+                    <td>✅ Random selection</td>
+                </tr>
+                <tr>
+                    <td>Difficulty Levels</td>
+                    <td>❌ None</td>
+                    <td>✅ Easy/Medium/Hard</td>
+                </tr>
+                <tr>
+                    <td>Score History</td>
+                    <td>❌ No tracking</td>
+                    <td>✅ Best score saved</td>
+                </tr>
+                <tr>
+                    <td>User Experience</td>
+                    <td>❌ Basic</td>
+                    <td>✅ Interactive feedback</td>
+                </tr>
+            </table>
+            
+            <h3>Version 2 vs Version 3</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Feature</th>
+                    <th>Version 2</th>
+                    <th>Version 3</th>
+                </tr>
+                <tr>
+                    <td>Question Order</td>
+                    <td>❌ Sequential</td>
+                    <td>✅ Randomized</td>
+                </tr>
+                <tr>
+                    <td>Difficulty Options</td>
+                    <td>❌ Single level</td>
+                    <td>✅ 3 difficulty levels</td>
+                </tr>
+                <tr>
+                    <td>Score Tracking</td>
+                    <td>❌ Session only</td>
+                    <td>✅ Persistent history</td>
+                </tr>
+                <tr>
+                    <td>Replayability</td>
+                    <td>❌ Predictable</td>
+                    <td>✅ Different every time</td>
+                </tr>
+                <tr>
+                    <td>User Choice</td>
+                    <td>❌ No options</td>
+                    <td>✅ Difficulty selection</td>
+                </tr>
+            </table>
+            
+            <h3>Key Improvements in Version 3:</h3>
+            <div class="improvement-list">
+                <div class="improvement-item">Randomization Engine: No memorizing question sequences</div>
+                <div class="improvement-item">Difficulty Scaling: Choose your challenge level</div>
+                <div class="improvement-item">Smart Persistence: Remembers your best performance</div>
+                <div class="improvement-item">Progress Tracking: Motivational feedback system</div>
+                <div class="improvement-item">Infinite Replayability: Random selection keeps it fresh</div>
+                <div class="improvement-item">Enhanced UX: Better prompts and visual feedback</div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>🎓 Perfect For</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Students</h3>
+                    <p>Self-assessment and exam preparation</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Teachers</h3>
+                    <p>Quick classroom quizzes and assessments</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Developers</h3>
+                    <p>C programming portfolio project</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Learners</h3>
+                    <p>Understanding file I/O, algorithms, and data structures</p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>👨‍💻 Technical Highlights</h2>
+            <ul>
+                <li><strong>Memory Efficient:</strong> Static allocation with bounds checking</li>
+                <li><strong>Error Handling:</strong> Graceful file and input validation</li>
+                <li><strong>Algorithm Implementation:</strong> Fisher-Yates shuffle algorithm</li>
+                <li><strong>Modular Design:</strong> Clean function separation</li>
+                <li><strong>Cross-Platform:</strong> Works on Windows, Linux, macOS</li>
+            </ul>
+        </section>
+        
+        <footer>
+            <p>🌟 <strong>Made with C programming excellence</strong> - Perfect for academic projects and real-world learning!</p>
+        </footer>
+    </div>
+</body>
+</html>
