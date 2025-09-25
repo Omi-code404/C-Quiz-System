@@ -84,9 +84,10 @@ A C language-based MCQ Quiz System built in multiple versions – starting from 
 3. Compile & run the program
 
 ---
-# 🎯 **Version 3 – Advanced Quiz System**
+# *Version 3 – QuizProjectV2*
 
-## ⚡ **Key Features**
+## *Type:* Intermediate
+## ** Features**
 - **Smart Randomization** - Unique quiz every time with Fisher-Yates shuffle
 - **3 Difficulty Levels** - Easy/Medium/Hard with separate question banks
 - **Progress Tracking** - Scores saved in history.txt with performance comparison
@@ -94,8 +95,9 @@ A C language-based MCQ Quiz System built in multiple versions – starting from 
 ---
 [Go to version 03](https://github.com/Omi-code404/C-Quiz-System/tree/main/Version03)
 
-##  **Look the output**
+## **Output image**
 [Image_01](https://github.com/Omi-code404/C-Quiz-System/blob/main/Version03/Screenshot%201.png)
+
 [Image_02](https://github.com/Omi-code404/C-Quiz-System/blob/main/Version03/Screenshot%202.png)
 
 ## *Version 3 Technologies*
