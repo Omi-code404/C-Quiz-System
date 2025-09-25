@@ -91,11 +91,12 @@ A C language-based MCQ Quiz System built in multiple versions – starting from 
 - **3 Difficulty Levels** - Easy/Medium/Hard with separate question banks
 - **Progress Tracking** - Scores saved in history.txt with performance comparison
 - **Enhanced UX** - Case-insensitive input, instant feedback, clean interface
+---
 [Go to version 03](https://github.com/Omi-code404/C-Quiz-System/tree/main/Version03)
 
 ##  **Look the output**
 [Image_01](https://github.com/Omi-code404/C-Quiz-System/blob/main/Version03/Screenshot%201.png)
-[Image_02](
+[Image_02](https://github.com/Omi-code404/C-Quiz-System/blob/main/Version03/Screenshot%202.png)
 
 ## *Version 3 Technologies*
 - File I/O (`fopen`, `fscanf`, `fprintf`)
@@ -105,6 +106,7 @@ A C language-based MCQ Quiz System built in multiple versions – starting from 
 - Randomization (`srand`, `rand`)
 - Multi-file management
 - Error handling & validation
+- 
 ## 🔮 **Version 4 Preview**
 - **Timer System** - Countdown for each question
 - **Speed Challenges** - Track response times under pressure
