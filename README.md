@@ -84,7 +84,29 @@ A C language-based MCQ Quiz System built in multiple versions – starting from 
 3. Compile & run the program
 
 ---
+# 🎯 **Version 3 – Advanced Quiz System**
 
+## ⚡ **Key Features**
+- **Smart Randomization** - Unique quiz every time with Fisher-Yates shuffle
+- **3 Difficulty Levels** - Easy/Medium/Hard with separate question banks
+- **Progress Tracking** - Scores saved in history.txt with performance comparison
+- **Enhanced UX** - Case-insensitive input, instant feedback, clean interface
+  [Go to version 03](
+##  **Look the output**
+[Image_01](
+[Image_02](
+## *Version 3 Technologies*
+- File I/O (`fopen`, `fscanf`, `fprintf`)
+- Fisher-Yates shuffle algorithm
+- Structures for data organization
+- String functions (`strcmp`, `toupper`)
+- Randomization (`srand`, `rand`)
+- Multi-file management
+- Error handling & validation
+## 🔮 **Version 4 Preview**
+- **Timer System** - Countdown for each question
+- **Speed Challenges** - Track response times under pressure
+---
 ## 🏷 License
 This project is licensed under the *MIT License* – see the [LICENSE](LICENSE) file for details.
 
@@ -93,3 +115,5 @@ This project is licensed under the *MIT License* – see the [LICENSE](LICENSE) 
 ✍ *Author:* Omi Das  
 📅 *Started:* 2025-08-15
 📅 *Updated:* 2025-08-21
+📅 *Updated:* 2025-09-25
+
