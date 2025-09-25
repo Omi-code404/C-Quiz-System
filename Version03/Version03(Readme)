@@ -1,7 +1,7 @@
-# MCQ Quiz Game - Version 3
+# MCQ Quiz Game -Version 3
 
 A C-based Quiz Application that presents 10 randomized multiple-choice questions with difficulty levels, tracks performance history, and provides immediate feedback with score comparison.
-
+---
 ## ✨ Features
 
 - **Take quizzes with multiple-choice questions** from 3 difficulty levels (Easy/Medium/Hard)
@@ -13,7 +13,7 @@ A C-based Quiz Application that presents 10 randomized multiple-choice questions
 - **10 questions per quiz session** - Perfect bite-sized learning
 - **Case-insensitive input** - Accepts both A/a, B/b, C/c, D/d
 - **Motivational feedback** - Encouraging messages based on improvement
-
+---
 ## 🛠 Technologies Used
 
 - **C Language** (Standard C – ANSI/ISO C)
@@ -156,7 +156,7 @@ Do you want to see your last best score? (Y/N): y
 - **Teachers**: Quick classroom quizzes
 - **Developers**: C programming portfolio project
 - **Learning**: Understanding file I/O, algorithms, and data structures
-
+---
 ## 👨‍💻 Technical Highlights
 
 - **Memory Efficient**: Static allocation with bounds checking
@@ -167,4 +167,3 @@ Do you want to see your last best score? (Y/N): y
 
 ---
 
-**🌟 Made with C programming excellence - Perfect for academic projects and real-world learning!**
