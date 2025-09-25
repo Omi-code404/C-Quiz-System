@@ -84,7 +84,7 @@ A C language-based MCQ Quiz System built in multiple versions – starting from 
 3. Compile & run the program
 
 ---
-# *Version 3 – QuizProjectV2*
+### *Version 3 – QuizProjectV3*
 
 ## *Type:* Intermediate
 ## ** Features**
