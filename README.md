@@ -87,7 +87,7 @@ A C language-based MCQ Quiz System built in multiple versions – starting from 
 ### *Version 3 – QuizProjectV3*
 
 ## *Type:* Advanced
-## ** Features**
+## *Features*
 - **Smart Randomization** - Unique quiz every time with Fisher-Yates shuffle
 - **3 Difficulty Levels** - Easy/Medium/Hard with separate question banks
 - **Progress Tracking** - Scores saved in history.txt with performance comparison
